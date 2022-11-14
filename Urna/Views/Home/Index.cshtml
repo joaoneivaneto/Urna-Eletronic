@@ -2,19 +2,91 @@
     ViewData["Title"] = "Urna De Votação";
 }
 
-<style>
-    corpo{
 
-    }
-</style>
-<div id="corpo" 
-    style="
-    height: 531px; 
-    margin-left:-125px; 
-    width:1366px; 
-    margin-top:-16px; 
-    background-color: #a9a9a9"
->
+<div id="Corpo">
+    <div id="Tela">
+        <!-- tela de votação-->
+        <div id="Presi">
+            <h3 class="Intro">SEU VOTO PARA</h3>
 
-    
+            <div id="Tela_Presi">
+                <img id="Foto_Cand" src="https://static.vecteezy.com/system/resources/previews/009/267/454/non_2x/user-icon-design-free-png.png" alt="">
+            </div>
+            <div id="Tela_Vice">
+                <img id="Foto_Vice" src="https://static.vecteezy.com/system/resources/previews/009/267/454/non_2x/user-icon-design-free-png.png" alt="">
+            </div>
+            <h3 id="Text_Presi">PRESIDENTE DA REPÚBLICA</h3>
+
+            <H4 id="numero">NUMÉRO:</H4>
+            <p id="digito1"><p id="Valor1"></p>
+            <p id="digito2"><p id="Valor2"></p>
+            <H4 id="Nome">CANDIDADO:</H4>
+            <h4 id="Nom_Candidato">nome do canditato</h4>
+            <H4 id="Vice">VICE:</H4>
+            <h4 id="Nom_Vice">nome do canditato</h4>
+            <div id="help">
+                <h4 id="Title_Help">APERTE A TECLA:</h4>
+                <H4 id="Help_Verde">VERDE</H4>
+                <H4 id="Descricao_Verde">
+                    para&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+                    este voto
+                </H4>
+                <H4 id="Confirm">CONFIRMA</H4>
+                <h4 id="Help_Laranja">LARANJA</h4>
+                <H4 id="Descricao_Laranja">
+                    para&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;
+                    este voto
+                </H4>
+
+                <h4 id="Reiniciar">REINICIAR</h4>
+            </div>
+
+        </div>
+
+        <!-- tela de Fim-->
+        <!-- <div id="Fim">
+            <h1>FIM</h1>
+            <button id="DashBoard">DashBoard</button>
+            <button id="ListadDeCanditato">LISTA DE CANDITADOS</button>
+            <button id="ReiVot">REINICIAR VOTAÇÃO</button>
+
+
+        </div> -->
+    </div>
+    <div id="Teclado">
+        <div id="fileira1">
+            <button id="primeiro" onclick="Condition('1','1')">1</button>
+            <button id="segundo" onclick="Condition('2','2')">2</button>
+            <button id="terceiro" onclick="Condition('3','3')">3</button>
+        </div>
+        <div id="fileira2">
+            <button id="terceiro" onclick="Condition('4','4')">4</button>
+            <button id="quarto" onclick="Condition('5','5')">5</button>
+            <button id="quinto" onclick="Condition('6','6')">6</button>
+        </div>
+        <div id="fileira3">
+            <button onclick="Condition('7','7')">7</button>
+            <button onclick="Condition('8','8')">8</button>
+            <button onclick="Condition('9','9')">9</button>
+        </div>
+
+        <div id="fileira4">
+            <button onclick="Condition('0','0')">0</button>
+        </div>
+
+        <div id="fileira5">
+            <button id="branco">BRANCO</button>
+            <button id="corrige" onclick="Limpar()">CORRIGE</button>
+            <button id="confirma">CONFIRMA</button>
+        </div>
+
+
+    </div>
+    <div id="Title">
+        <h1 id="Justica">JUSTIÇA</h1>
+        <h1 id="Eleitoral">ELEITORAL</h1>
+        <img id="logo" src="~/img/image.png" alt="">
+    </div>
 </div>

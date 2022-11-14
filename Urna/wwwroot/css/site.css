@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+body {
+    background-color: #a9a9a9;
+    overflow: hidden;
+    height:40px;
+}
+
+#Corpo {
+   
+    width: 400px;
+    padding: 180px;
+    height: 0px;
+    background-color: white;
+    margin-left: 290px;
+    margin-top: 50px;
+    box-shadow: 1px 1px 1px 1px black;
+}
+
+#Tela {
+    margin-top: -150px;
+    margin-left: -160px;
+    height: 85px;
+    width: 190px;
+    padding: 100px;
+    background-color: white;
+    /* background-color: #d3d3d3 ; */
+
+    border: 1px solid black;
+}
+
+#Teclado {
+    margin-top: -250px;
+    margin-right: 300px;
+    margin-left: 250px;
+    width: 100px;
+    padding: 100px;
+    height: 65px;
+    background-color: rgb(10, 12, 10);
+    border: 1px solid black;
+}
+
+#Title {
+    margin-top: -332px;
+    margin-left: 250px;
+    width: 300px;
+    height: 60px;
+    padding: -1px;
+    background-color: #f8f8ff;
+    border: 1px solid black;
+}
+
+#Justica {
+    margin-top: -1px;
+    margin-left: 130px;
+    width: 235px;
+    height: 50px;
+    padding: -1px;
+    font-family: Arial;
+}
+
+#Eleitoral {
+    margin-top: -40px;
+    margin-left: 110px;
+    width: 235px;
+    height: 50px;
+    padding: -1px;
+    font-family: Arial;
+}
+
+#logo {
+    margin-top: -100px;
+    margin-left: -20px;
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    padding: -1px;
+    font-family: Arial;
+}
+
+#fileira1, #fileira2, #fileira3, #fileira4 {
+    margin-top: -80px;
+    margin-left: -20px;
+    display: flex;
+    flex-wrap: nowrap;
+    position: absolute;
+}
+
+
+    #fileira1 > button {
+        background-color: black;
+        color: white;
+        text-align-last: justify;
+        margin: 8px;
+        width: 35px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+    #fileira2 > button {
+        background-color: black;
+        color: white;
+        text-align-last: justify;
+        margin: 8px;
+        width: 35px;
+        text-align: center;
+        font-size: 20px;
+    }
+
+#fileira2 {
+    margin-top: -35px;
+}
+
+#fileira3 > button {
+    background-color: black;
+    color: white;
+    text-align-last: justify;
+    margin: 8px;
+    width: 35px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#fileira3 {
+    margin-top: 10px;
+}
+
+#fileira4 > button {
+    background-color: black;
+    color: white;
+    text-align-last: justify;
+    margin: 8px;
+    width: 35px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#fileira4 {
+    margin-top: 55px;
+    margin-left: 32px;
+}
+
+
+
+#fileira5 {
+    margin-top: 110px;
+    display: flex;
+    flex-wrap: nowrap;
+    position: absolute;
+}
+
+
+
+#branco {
+    background-color: white;
+    border: white;
+    font-weight: 900;
+    position: absolute;
+    margin-left: -80px;
+    height: 40px;
+    width: 80px;
+}
+
+#corrige {
+    background-color: orange;
+    border: white;
+    font-weight: 900;
+    position: absolute;
+    margin-left: 12px;
+    height: 40px;
+    width: 80px;
+}
+
+#confirma {
+    background-color: green;
+    border: white;
+    font-weight: 900;
+    position: absolute;
+    margin-left: 100px;
+    margin-top: -20px;
+    height: 60px;
+    width: 95px;
+}
+
+#Foto_Cand {
+    width: 60px;
+    margin-top: -10px;
+    position: absolute;
+}
+
+#Foto_Vice {
+    width: 50px;
+    margin-top: -10px;
+    position: absolute;
+}
+
+.Intro {
+    margin-top: -100px;
+    margin-left: -95px;
+    font-family: Arial;
+    color: gray;
+    font-size: 16px;
+}
+
+#Tela_Presi {
+    margin-top: -35px;
+    margin-left: 199px;
+    width: 50px;
+    padding: 20px;
+    height: 60px;
+    background-color: white;
+    border: 1px solid black;
+    position: absolute;
+}
+
+#Tela_Vice {
+    margin-top: 66px;
+    margin-left: 214px;
+    width: 35px;
+    padding: 20px;
+    height: 60px;
+    background-color: white;
+    border: 1px solid black;
+    position: absolute;
+}
+
+#Text_Presi {
+    margin-top: 30px;
+    margin-left: -40px;
+    font-family: Arial;
+    font-size: 10px;
+}
+
+#numero {
+    margin-top: 70px;
+    margin-left: -100px;
+    font-family: Arial;
+    font-size: 10px;
+}
+
+/* #Presi > input{
+  margin-top: -30px;
+  width: 10px;
+  display: flex;
+  position: absolute;
+}
+
+#digito1{
+  margin-left: -27px;
+  position: absolute;
+}
+#digito2{
+  margin-left: -8px;
+  position: absolute;
+}   */
+
+#Nome {
+    margin-top: 20px;
+    margin-left: -100px;
+    font-family: Arial;
+    font-size: 10px;
+}
+
+#Nom_Candidato {
+    margin-top: -26px;
+    margin-left: -26px;
+    font-family: Arial;
+    font-size: 13px;
+    position: absolute;
+}
+
+#Vice {
+    margin-top: 20px;
+    margin-left: -100px;
+    font-family: Arial;
+    font-size: 10px;
+}
+
+#Nom_Vice {
+    margin-top: -26px;
+    margin-left: -26px;
+    font-family: Arial;
+    font-size: 13px;
+    position: absolute;
+}
+
+#help {
+    margin-top: 36px;
+    margin-left: -101px;
+    width: 350px;
+    padding: 20px;
+    height: 6px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+#digito1 {
+    margin-top: -28px;
+    margin-left: -30px;
+    width: 0px;
+    padding: 6.5px;
+    height: 4px;
+    border-radius: 3px;
+    background-color: white;
+    border: 1px solid black;
+    position: absolute;
+}
+
+
+#Valor1 {
+    margin-top: -27px;
+    margin-left: -26px;
+    color: black;
+    position: absolute;
+}
+
+#digito2 {
+    margin-top: -28px;
+    margin-left: -10px;
+    width: 0px;
+    padding: 6.5px;
+    height: 4px;
+    border-radius: 3px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid black;
+    position: absolute;
+}
+
+#Valor2 {
+    margin-top: -29px;
+    margin-left: -6px;
+    color: black;
+    position: absolute;
+}
+
+#Title_Help {
+    margin-top: -20px;
+    margin-left: -20px;
+    font-family: Arial;
+    font-size: 10px;
+}
+
+#Help_Verde {
+    margin-top: -10px;
+    margin-left: -20px;
+    font-family: Arial;
+    font-size: 15px;
+}
+
+#Descricao_Verde {
+    margin-top: -38px;
+    margin-left: 60px;
+    font-family: Arial;
+    font-size: 15px;
+}
+
+#Confirm {
+    margin-top: -37px;
+    margin-left: 99px;
+    font-family: Arial;
+    font-size: 15px;
+}
+
+#Help_Laranja {
+    margin-top: -20px;
+    margin-left: -20px;
+    font-family: Arial;
+    font-size: 15px;
+}
+
+#Descricao_Laranja {
+    margin-top: -38px;
+    margin-left: 60px;
+    font-family: Arial;
+    font-size: 15px;
+}
+
+#Reiniciar {
+    margin-top: -37px;
+    margin-left: 99px;
+    font-family: Arial;
+    font-size: 15px;
+}
+
+
+#Fim > h1 {
+    margin-top: 15px;
+    margin-left: 50px;
+    font-family: Arial;
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.582);
+}
+
+
+
+#ListadDeCanditato {
+    margin-top: -1px;
+    margin-left: 4px;
+    position: absolute;
+    border-radius: 12px;
+    background-color: #f44336;
+    border: #f44336;
+}
+
+#ReiVot {
+    margin-top: 20px;
+    margin-left: -10px;
+    position: absolute;
+    border-radius: 12px;
+    background-color: #555555;
+    border: #555555;
+}
+
+#Menu {
+    width: 1326px;
+    padding: 20px;
+    height: -10px;
+    background-color: white;
+    margin-left: -7px;
+    margin-top: -10px;
+}
+
+
+
+
+
+
+
+#Nome_Projeto {
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    position: absolute;
+    color: #292929;
+    text-decoration: none;
+    margin-top: -15px;
+    margin-left:150px;
+}
+
+#Nome_Projeto:hover {
+    text-decoration: underline;
+    text-decoration-color: #a9a9a9;
+}
+
+#home {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    position: absolute;
+    color: #292929;
+    text-decoration: none;
+    margin-top: -5px;
+    margin-left: 250px;
+}
+#home:hover {
+    text-decoration: underline;
+    text-decoration-color: #a9a9a9;
+}
+
+#Dahsboard {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    position: absolute;
+    color: #292929;
+    text-decoration: none;
+    margin-top: -5px;
+    margin-left: 350px;
+}
+#Dahsboard:hover {
+    text-decoration: underline;
+    text-decoration-color: #a9a9a9;
+}
+footer {
+    width: 1326px;
+    padding: 20px;
+    height: -10px;
+    background-color: white;
+    margin-left: -7px;
+    margin-top: 143px;
+}
+
+#des_footer {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #292929;
+    text-decoration: none;
+    margin-left: 150px;
+}
+#next_page {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #292929;
+    text-decoration: none;
+}
+
+#next_page:hover {
+    text-decoration: underline;
+    text-decoration-color: #a9a9a9;
+}
