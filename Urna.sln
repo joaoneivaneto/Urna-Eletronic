@@ -5,7 +5,7 @@ VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Urna", "Urna\Urna.csproj", "{8372087C-522B-4CD9-8BBC-C030878FF8A7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CanditosApi", "CanditosApi\CanditosApi.csproj", "{3AC97636-7A13-455A-AF01-BCA0F5821A2E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CandidatosApi", "CandidatosApi\CandidatosApi.csproj", "{4D8CA11A-CE15-4B64-9AE5-B44695AF1A58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{8372087C-522B-4CD9-8BBC-C030878FF8A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8372087C-522B-4CD9-8BBC-C030878FF8A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8372087C-522B-4CD9-8BBC-C030878FF8A7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3AC97636-7A13-455A-AF01-BCA0F5821A2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3AC97636-7A13-455A-AF01-BCA0F5821A2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3AC97636-7A13-455A-AF01-BCA0F5821A2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3AC97636-7A13-455A-AF01-BCA0F5821A2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D8CA11A-CE15-4B64-9AE5-B44695AF1A58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D8CA11A-CE15-4B64-9AE5-B44695AF1A58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D8CA11A-CE15-4B64-9AE5-B44695AF1A58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D8CA11A-CE15-4B64-9AE5-B44695AF1A58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
