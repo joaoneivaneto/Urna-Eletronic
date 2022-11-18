@@ -21,6 +21,8 @@ namespace CandidatosApi.Models
         [Required]
         public int Legenda { get; set; }
 
+        [JsonIgnore]
+        public ICollection<Voto> votos { get; set; }
 
     }
 }

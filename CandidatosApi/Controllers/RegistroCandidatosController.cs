@@ -1,4 +1,4 @@
-﻿
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -36,7 +36,7 @@ namespace CandidatosApi.Controllers
 
             if (registroCandidato == null)
             {
-                return NotFound();
+                return StatusCode(404, "Candidato Não existe");
             }
 
             return registroCandidato;
@@ -47,18 +47,33 @@ namespace CandidatosApi.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutRegistroCandidato(Guid id, CreateRegistroCandidatosDto request)
         {
-            var UpdateRegistro = new RegistroCandidato
+            var UpdateCandidato = new RegistroCandidato
             {
-
                 Id = id,
                 NomeCompleto = request.Nome_Candidato,
                 NomeVice = request.Nome_Vice,
                 DataRegistro = request.Data_Registro,
                 Legenda = request.Legenda
             };
-          
+            
 
-            _context.Entry(UpdateRegistro).State = EntityState.Modified;
+            _context.Entry(UpdateCandidato).State = EntityState.Modified;
+
+            if (_context.RegistroCandidatos.Any(n => n.NomeCompleto == request.Nome_Candidato))
+            {
+                return StatusCode(404, "candidato ja existe");
+            }
+
+            if (_context.RegistroCandidatos.Any(n => n.NomeVice == request.Nome_Vice))
+            {
+                return StatusCode(404, "vice ja existe");
+            }
+
+            if (_context.RegistroCandidatos.Any(n => n.Legenda == request.Legenda))
+            {
+                return StatusCode(404, "Legenda ja existe");
+            }
+
 
             try
             {
@@ -68,15 +83,15 @@ namespace CandidatosApi.Controllers
             {
                 if (!RegistroCandidatoExists(id))
                 {
-                    return NotFound();
+                    return StatusCode(404, "Candidato Não existe");
                 }
                 else
                 {
                     throw;
                 }
             }
+            return CreatedAtAction("GetRegistroCandidato", new { id = request.Id_Candidato }, request);
 
-            return NoContent();
         }
 
         // POST: api/RegistroCandidatos
@@ -84,17 +99,31 @@ namespace CandidatosApi.Controllers
         [HttpPost]
         public async Task<ActionResult<RegistroCandidato>> PostRegistroCandidato(CreateRegistroCandidatosDto request)
         {
-
-            var newRegistro = new RegistroCandidato
+            var newCandidato = new RegistroCandidato
             {
                 Id = request.Id_Candidato,
                 NomeCompleto = request.Nome_Candidato,
                 NomeVice = request.Nome_Vice,
                 DataRegistro = request.Data_Registro,
                 Legenda = request.Legenda
-
             };
-            _context.RegistroCandidatos.Add(newRegistro);
+
+            if(_context.RegistroCandidatos.Any(n => n.NomeCompleto == request.Nome_Candidato))
+            {
+                return StatusCode(404, "candidato ja existe");
+            }
+
+            if (_context.RegistroCandidatos.Any(n => n.NomeVice == request.Nome_Vice))
+            {
+                return StatusCode(404, "vice ja existe");
+            }
+
+            if (_context.RegistroCandidatos.Any(n => n.Legenda == request.Legenda))
+            {
+                return StatusCode(404, "Legenda ja existe");
+            }
+
+            _context.RegistroCandidatos.Add(newCandidato);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetRegistroCandidato", new { id = request.Id_Candidato }, request);
@@ -107,13 +136,13 @@ namespace CandidatosApi.Controllers
             var registroCandidato = await _context.RegistroCandidatos.FindAsync(id);
             if (registroCandidato == null)
             {
-                return NotFound();
+                return StatusCode(404, "Candidato Não existe");
             }
 
             _context.RegistroCandidatos.Remove(registroCandidato);
             await _context.SaveChangesAsync();
 
-            return NoContent();
+            return StatusCode(205, "Candidato removido com sucesso");
         }
 
         private bool RegistroCandidatoExists(Guid id)
