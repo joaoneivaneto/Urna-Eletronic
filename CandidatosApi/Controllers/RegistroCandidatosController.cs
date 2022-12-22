@@ -30,7 +30,7 @@ namespace CandidatosApi.Controllers
 
         // GET: api/RegistroCandidatos/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<RegistroCandidato>> GetRegistroCandidato(Guid id)
+        public async Task<ActionResult<RegistroCandidato>> GetRegistroCandidato(Guid id )
         {
             var registroCandidato = await _context.RegistroCandidatos.FindAsync(id);
 
@@ -40,6 +40,21 @@ namespace CandidatosApi.Controllers
             }
 
             return registroCandidato;
+        }
+        [HttpGet]
+        [Route("Search")]
+        public async Task<ActionResult<List<RegistroCandidato>>> Search([FromQuery] int legenda)
+        {
+            var registroCandidato = await _context.RegistroCandidatos
+                 .Where(x => x.Legenda == legenda)
+                 .ToListAsync();
+            if (registroCandidato == null)
+            {
+                return StatusCode(404, "Candidato Não existe");
+            }
+
+            return registroCandidato;
+
         }
 
         // PUT: api/RegistroCandidatos/5
@@ -149,5 +164,8 @@ namespace CandidatosApi.Controllers
         {
             return _context.RegistroCandidatos.Any(e => e.Id == id);
         }
+
+        
+       
     }
 }

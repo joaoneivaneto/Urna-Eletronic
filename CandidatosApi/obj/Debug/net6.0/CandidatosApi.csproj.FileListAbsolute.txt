@@ -264,3 +264,4 @@ C:\workspaces\urna\Urna\CandidatosApi\obj\Debug\net6.0\CandidatosApi.pdb
 C:\workspaces\urna\Urna\CandidatosApi\obj\Debug\net6.0\CandidatosApi.genruntimeconfig.cache
 C:\workspaces\urna\Urna\CandidatosApi\obj\Debug\net6.0\ref\CandidatosApi.dll
 C:\workspaces\urna\Urna\CandidatosApi\bin\Debug\net6.0\Rebit.Data.dll
+C:\workspaces\urna\Urna\CandidatosApi\bin\Debug\net6.0\System.Reflection.MetadataLoadContext.dll

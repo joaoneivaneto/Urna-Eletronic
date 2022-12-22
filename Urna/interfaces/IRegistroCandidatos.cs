@@ -13,5 +13,9 @@ namespace Urna.interfaces
         RegistroCandidatos GetOne(Guid id);
 
         RegistroCandidatos Delete (Guid id);
+
+        /*RegistroCandidatos getBylegend(int di1, int di2);*/
     }
+
+
 }

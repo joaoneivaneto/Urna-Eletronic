@@ -6,8 +6,11 @@ namespace CandidatosApi.Dto
     {
         [JsonIgnore]
         public Guid Id { get; set; }
-        public Guid Id_Candidato { get; set; }
+
+        public Guid Id_Candidato { get; set; } 
 
         public DateTime Data_Voto { get; set; } = DateTime.Now;
+
+        public string status { get; set; }
     }
 }

@@ -9,11 +9,13 @@ namespace CandidatosApi.Models
         [Required]
         public Guid id { get; set; }
 
-        [Required]
-        public Guid IdCandidato { get; set; }
+        
+        public Guid? IdCandidato { get; set; }
 
         [Required]
         public DateTime DataVoto { get; set; }
+
+        public string status { get; set; }
 
         [JsonIgnore]
         public RegistroCandidato RegistroCandidato { get; set; }

@@ -1,4 +1,4 @@
-﻿
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CandidatosApi.Models;
 using CandidatosApi.Dto;
+using Microsoft.Extensions.Logging.Abstractions;
 
 namespace CandidatosApi.Controllers
 {
@@ -43,7 +44,28 @@ namespace CandidatosApi.Controllers
 
             return voto;
         }
+        [HttpGet]
+        [Route("GetBrancoNulo")]
+        public async Task<ActionResult<List<Voto>>> GetBrancoNulo([FromQuery] string status)
+        {
 
+            var statusVoto = await _context.votos
+                  .Where(x => x.status == status)
+                  .ToListAsync();
+
+            if (status == null ^ status != "Nulo" ^ status != "Branco" ^ status != "Concedido")
+            {
+                return StatusCode(404, "esse voto não existe");
+            }
+
+            return statusVoto;
+        }
+
+
+
+
+        // POST: api/Votos
+        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
         public async Task<ActionResult<Voto>> PostVoto(Votodto request)
         {
@@ -51,25 +73,41 @@ namespace CandidatosApi.Controllers
             {
                 id = request.Id,
                 IdCandidato = request.Id_Candidato,
-                DataVoto = request.Data_Voto
+                DataVoto = request.Data_Voto,
+                status = request.status
 
             };
-            
-            if(VotoExists(request.Id_Candidato) && VotoExists2(request.Data_Voto))
+
+            if (VotoExists2(request.Data_Voto))
             {
                 return StatusCode(404, "voto ja existe");
+            }
+            Guid guid = new Guid("00000000-0000-0000-0000-000000000000");
+            if (!CandidatoExists(request.Id_Candidato) && request.Id_Candidato != guid)
+            {
+                return StatusCode(404, "O candidato Não existe");
+            }
+            if ((request.Id_Candidato == guid && 
+                (request.status != "Nulo" && 
+                request.status != "Branco")) || 
+                (request.Id_Candidato != guid && 
+                request.status != "Concedido"))
+            {
+                return StatusCode(404, "voto inválido");
             }
 
             _context.votos.Add(newVoto);
             await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetVoto", new { id = request.Id }, request);
+
         }
 
-       
-        private bool VotoExists(Guid id)
+
+
+        private bool CandidatoExists(Guid id)
         {
-            return _context.votos.Any(e => e.IdCandidato == id);
+            return _context.RegistroCandidatos.Any(e => e.Id == id);
         }
 
         private bool VotoExists2(DateTime data)
@@ -77,6 +115,6 @@ namespace CandidatosApi.Controllers
             return _context.votos.Any(e => e.DataVoto == data);
         }
 
-
+       
     }
 }

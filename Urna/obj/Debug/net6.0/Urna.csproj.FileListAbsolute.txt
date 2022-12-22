@@ -239,3 +239,7 @@ C:\workspaces\urna\Urna\Urna\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Dra
 C:\workspaces\urna\Urna\Urna\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 C:\workspaces\urna\Urna\Urna\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\workspaces\urna\Urna\Urna\obj\Debug\net6.0\Urna.csproj.CopyComplete
+C:\workspaces\urna\Urna\Urna\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\workspaces\urna\Urna\Urna\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\workspaces\urna\Urna\Urna\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\workspaces\urna\Urna\Urna\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll

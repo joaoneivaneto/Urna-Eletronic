@@ -237,21 +237,7 @@ body {
     font-size: 10px;
 }
 
-/* #Presi > input{
-  margin-top: -30px;
-  width: 10px;
-  display: flex;
-  position: absolute;
-}
 
-#digito1{
-  margin-left: -27px;
-  position: absolute;
-}
-#digito2{
-  margin-left: -8px;
-  position: absolute;
-}   */
 
 #Nome {
     margin-top: 20px;
@@ -307,7 +293,7 @@ body {
 
 
 #Valor1 {
-    margin-top: -27px;
+    margin-top: -25px;
     margin-left: -26px;
     color: black;
     position: absolute;
@@ -327,7 +313,7 @@ body {
 }
 
 #Valor2 {
-    margin-top: -29px;
+    margin-top: -27px;
     margin-left: -6px;
     color: black;
     position: absolute;

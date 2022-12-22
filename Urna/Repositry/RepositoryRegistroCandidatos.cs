@@ -65,6 +65,7 @@ namespace Urna.Repositry
             return registroCandidatoCriado;
         }
 
+        
         public RegistroCandidatos GetOne(Guid id)
         {
             var registroCandidatoCriado = new RegistroCandidatos();
@@ -142,4 +143,14 @@ namespace Urna.Repositry
 
         }
     }
+    /*
+    public RegistroCandidatos getBylegend(int di1, int di2)
+    {
+        string distring1 = Convert.ToString(di1);
+        string distring2 = Convert.ToString(di2);
+
+
+
+    }*/
+
 }

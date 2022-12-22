@@ -1,4 +1,5 @@
-﻿@{
+﻿@model Urna.Models.RegistroCandidatos
+@{
     ViewData["Title"] = "Urna De Votação";
 }
 
@@ -19,8 +20,12 @@
             <h3 id="Text_Presi">PRESIDENTE DA REPÚBLICA</h3>
 
             <H4 id="numero">NUMÉRO:</H4>
-            <p id="digito1"><p id="Valor1"></p>
-            <p id="digito2"><p id="Valor2"></p>
+
+            <!-- pegar informações -->
+
+            <input type="text" id="digito1" />
+            <input type="text" id="digito2" />
+
             <H4 id="Nome">CANDIDADO:</H4>
             <h4 id="Nom_Candidato">nome do canditato</h4>
             <H4 id="Vice">VICE:</H4>
